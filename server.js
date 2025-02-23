@@ -18,5 +18,9 @@ connectDB();
 app.use("/api/news", newsRoutes);
 app.use("/api/admin", adminRoutes);
 
+app.get("/", (req, res) => {
+    res.send("Hello From Spondon Server!");
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
